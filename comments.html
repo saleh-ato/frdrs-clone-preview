@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرادرس – بزرگترین منبع فیلم های آموزشی دانشگاهی و مهندسی </title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+    <link rel="preconnect" href="//v1.fontapi.ir">
+    <link href="https://v1.fontapi.ir/css/Estedad" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="messageElement">
+        باید عرض صفحه شما از 300 پیکسل کمتر نباشد.
+    </div>
+    <div id="main">
+        <div id="search_wrapper">
+            <svg class="icon p1 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <input type="text" placeholder="جستجو ..." class="border-none px-2 p1 outline-none round w-66"
+                id="search_input">
+        </div>
+        <!-- Navigation -->
+        <header class="flex justify-center mt-2">
+            <nav class="rectangle-10 flex align-center space-around text-white pd2">
+                <div class="w-75 flex align-center flex-start">
+                    <div class="circle"></div>
+                    <div class="mr-2">فرادرس</div>
+                </div>
+                <div class="w-25 flex collapse">
+                    <svg class="icon close p1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                    <img src="./static/images/logo-rectangle.svg" alt="" class="sidebar-logo">
+                    <div class="pd2 border-left flex align-center w-50 justify-center" id="search">جستجو ...
+                        <img src="./static/icons/magnifier.png" alt="" class="icon">
+                    </div>
+                    <div class="flex space-around w-50 align-center">
+                        <button class="round p1 bg-none text-white">ورود</button>
+                        <button class="bg-white p1 text-black round border-none">ثبت نام</button>
+                    </div>
+                </div>
+                <img src="./static/icons/menu.png" alt="" class="icon open">
+                <!-- <svg class="icon open" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-32 w-32 [color]-$fill-color"
+                style="stroke-width: var(--grid-item-icon-stroke-width); transform: scale(var(--grid-item-icon-scale));">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg> -->
+            </nav>
+        </header>
+        <!-- Navigation -->
+        <div class="flex justify-center mt-4">
+            <div class="flex flex-column w-80">
+                <img src="./static/images/logo-rectangle.svg" alt="" class="w-50 px-25">
+                <h2>نظرات کاربران درباره فرادرس</h2>
+                <p>در ادامه چند مورد از نظرات دانشجویان فرادرس آمده‌اند. شما نیز اگر نقد و نظری دارید، خوشحال می‌شویم در
+                    همین صفحه نظرتان را وارد کنید.</p>
+                <form action="" class="flex flex-column w-50 mx-auto shadow-1 p2 round my-1 text-center" id="userForm">
+                    <label for="name">نام شما</label>
+                    <input id="name" type="text" name="name" placeholder="نام خود را وارد کنید" class="login w-50">
+                    <label for="comment" class="mt-2">نظر شما</label>
+                    <textarea name="comment" id="comment" cols="30" rows="10" class="login w-50" placeholder="نظر شما درباره فرادرس چیست؟"></textarea>
+                    <button type="submit" id="sendComment" class="btn btn-primary border-none p1 round signinBtn w-50 mx-auto mt-2 pointer">
+                        ثبت نظر
+                    </button>
+                </form>
+                <div id="comments">
+                    <div class="flex flex-column " id="userInfoBox">
+                        <div class="bg-light comment round-1 p1 flex" id="tempComment">
+                            <img src="./static/images/avatar.webp" alt="" class="circle">
+                            <div class="flex flex-column mr-2">
+                                <h3 class="text-mute" id="userName">محمد علی</h3>
+                                <p id="pComment">سلام خداقوت <br>
+                                    پشتیبانی و پاسخگویی شبانه روزی و متعهدانه و سریع فرادرس واقعا تعجب برانگیز و جای
+                                    تقدیر داره<br>
+                                    با آرزوی موفقیت برای شما.</p>
+                            </div>
+                        </div>
+                        <div class="bg-light comment round-1 p1 flex mt-2">
+                            <img src="./static/images/avatar.webp" alt="" class="circle">
+                            <div class="flex flex-column mr-2">
+                                <h3 class="text-mute" id="userName">آناهیتا</h3>
+                                <p id="pComment">با سلام و خدا قوت به شما دوستان عزیز<br>
+                                    بنده برای اولین بار از محصولات سایت شما را تهیه کردم. بسیار عالی بود. بسیار خوشحالم
+                                    که دوستان عزیزی هستند که برای تسهیل و تسریع یادگیری<br>
+                                    در کشورم فعالیت می کنند. از جناب دکتر کلامی هم کمال تشکر را دارم از تدریس ایشان
+                                    واقعا لذت بردم. <br>
+                                    موفق و سربلند باشید.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="mt-2 w-100 bg-light flex flex-column justify-center">
+            <div class="flex py-2 flex-wrap justify-center row-gap flex-column-sm align-center">
+                <div class="flex flex-column w-25 footer-description">
+                    <div class="logo">
+                        <img src="./static/icons/logo.svg" alt="" class="icon">
+                        <h2 class="display-inline">فرادرس</h2>
+                    </div>
+                    <!-- <img src="./static/images/logo-rectangle.svg" alt=""> -->
+                    <p>سازمان علمی و آموزشی فرادرس، قدیمی‌ترین و بزرگ‌ترین پلتفرم آموزش آنلاین ایران است که طی بیش از یک
+                        دهه
+                        فعالیت خود، بالغ بر ۲۱,۰۰۰ ساعت آموزش آنلاین، در قالب بیش از ۵,۷۰۰ عنوان آموزشی علمی، مهارتی و
+                        کاربردی، منتشر کرده‌است.</p>
+                </div>
+                <div class="flex flex-column w-20 align-center">
+                    <h3>لینک های مهم</h3>
+                    <ul>
+                        <li>آموزش سازمانی</li>
+                        <li>درباره ما</li>
+                        <li>تماس با ما</li>
+                        <li>حریم خصوصی</li>
+                        <li>سوالات رایج</li>
+                        <li>همکاری</li>
+                    </ul>
+                </div>
+                <div class="flex flex-column w-20 align-center">
+                    <h3>لینک های مهم</h3>
+                    <ul>
+                        <li>آموزش سازمانی</li>
+                        <li>درباره ما</li>
+                        <li>تماس با ما</li>
+                        <li>حریم خصوصی</li>
+                        <li>سوالات رایج</li>
+                        <li>همکاری</li>
+                    </ul>
+                </div>
+                <div class="flex flex-column w-33 align-center">
+                    <img src="./static/images/logo-rectangle.svg" class="w-80">
+
+                    <h4 class="text-blue">عضویت در خبرنامه</h4>
+                    <div class="search w-80 flex justify-center mt-2">
+                        <button class="round btn-black text-white border-none p1 px-2 w-40">ثبت نام</button>
+                        <input type="text" placeholder="آدرس پست الکترونیک"
+                            class="border-none w-60 p1 round bg-white mx-1 shadow">
+                    </div>
+                    <div class="flex flex-end mt-2 w-80 ">
+                        <a class="circle flex justify-center align-center mg2">Be</a>
+                        <a class="circle flex justify-center align-center mg2">IG</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-center copyright w-100 align-center flex-wrap flex-column-sm">
+                <ul class="flex align-center flex-wrap">
+                    <li class="mg2 flex align-center"><img src="./static/icons/tell.svg">&nbsp;&nbsp;&nbsp;0912-112-1212
+                    </li>
+                    <li class="mg2 flex align-center"><img
+                            src="./static/icons/email.svg">&nbsp;&nbsp;&nbsp;faradars@gmail.com</li>
+                    <li class="mg2 flex align-center"><img src="./static/icons/location.svg">&nbsp;&nbsp;&nbsp;تهران،
+                        خیابان
+                        ولیعصر</li>
+                </ul>
+                <span class="sub">تمامی حقوق محفوظ است - 2023&copy;</span>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer -->
+    <script src="./static/js/scripts.js"></script>
+    <script src="./static/js/comments.js"></script>
+</body>
+
+</html>
