@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرادرس – بزرگترین منبع فیلم های آموزشی دانشگاهی و مهندسی </title>
+    <link rel="stylesheet" href="./static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="//fdn.fontcdn.ir">
+    <link rel="preconnect" href="//v1.fontapi.ir">
+    <link href="https://v1.fontapi.ir/css/Estedad" rel="stylesheet">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="messageElement">
+        باید عرض صفحه شما از 300 پیکسل کمتر نباشد.
+    </div>
+    <div id="main">
+        <div id="search_wrapper">
+            <svg class="icon p1 text-white" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <input type="text" placeholder="جستجو ..." class="border-none px-2 p1 outline-none round w-66"
+                id="search_input">
+            <!-- <img src="./static/icons/magnifier.png" alt="" class="icon p1"> -->
+        </div>
+        <!-- Navigation -->
+        <header class="flex justify-center mt-2">
+            <nav class="rectangle-10 flex align-center space-around text-white pd2">
+                <div class="w-75 flex align-center flex-start">
+                    <div class="circle"></div>
+                    <div class="mr-2"><a href="./index.html" class="decoration-none text-white hover-light">فرادرس</a></div>
+                </div>
+                <div class="w-25 flex collapse">
+                    <svg class="icon close p1" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                    <img src="./static/images/logo-rectangle.svg" alt="" class="sidebar-logo">
+                    <div class="pd2 border-left flex align-center w-50 justify-center" id="search">جستجو ...
+                        <img src="./static/icons/magnifier.png" alt="" class="icon">
+                    </div>
+                    <div class="flex space-around w-50 align-center">
+                        <button class="round p1 bg-none"><a href="./index.html" class="text-white">ورود</a></button>
+                        <button class="bg-white p1 text-black round border-none">ثبت نام</button>
+                    </div>
+                </div>
+                <img src="./static/icons/menu.png" alt="" class="icon open">
+                <!-- <svg class="icon open" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="h-32 w-32 [color]-$fill-color"
+                style="stroke-width: var(--grid-item-icon-stroke-width); transform: scale(var(--grid-item-icon-scale));">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5"></path>
+            </svg> -->
+            </nav>
+        </header>
+        <!-- Navigation -->
+        <div class="flex w-100 justify-center mt-2">
+            <div class="w-90 flex space-around flex-column-sm">
+                <div class="flex flex-column w-20 align-center shadow-3 round-2 profile-side py-1">
+                    <img src="./static/images/user.jpg" alt="" class="icon px-1">
+                    <h2>نام کاربری</h2>
+                    <span>email@gmail.com</span>
+                    <div class="active profile-nav mt-2 border-top border-bottom w-100 text-center py-1"
+                        onclick="ShowInfo()">اطلاعات کاربری
+                    </div>
+                    <div class="profile-nav w-100 text-center py-1" onclick="ShowLearning(this)">آموزش‌های من</div>
+                </div>
+                <div class="flex w-75">
+                    <div id="my-info" class="active">
+                        <div class="flex align-center">
+                            <img src="./static/icons/location.svg" alt="" class="icon px-1">
+                            <h3>اطلاعات فردی</h3>
+                        </div>
+                        <div class="flex flex-wrap row-gap px-1 shadow-3 py-2 round-2">
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">نام</label>
+                                <input id="name" class="p1 round border" value="نام">
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">نام خانوادگی</label>
+                                <input id="name" class="p1 round border" value="نام خانوادگی">
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">شماره موبایل</label>
+                                <input id="name" class="p1 round border" value="شماره موبایل">
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">تاریخ تولد</label>
+                                <input type="date" name="" class="p1 round border w-100">
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">ایمیل</label>
+                                <input id="name" class="p1 round border" value="ایمیل">
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2 w-20">
+                                <label for="name">جنسیت</label>
+                                <select name="جنسیت" class="p1 round border">
+                                    <option value="جنسیت">جنسیت</option>
+                                    <option value="مرد">مرد</option>
+                                    <option value="زن">زن</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2">
+                                <label for="name">کد ملی</label>
+                                <input id="name" class="p1 round border" value="کد ملی">
+                            </div>
+                        </div>
+                        <div class="flex align-center mt-2">
+                            <img src="./static/icons/location.svg" alt="" class="icon px-1">
+                            <h3>محل سکونت</h3>
+                        </div>
+                        <div class="flex flex-wrap px-1 shadow-3 py-2 round-2">
+                            <div class="flex flex-column flex-start text-right pl-2 w-20">
+                                <label for="province">استان</label>
+                                <select name="province" id="province" class="p1 round border">
+                                    <option value="none">انتخاب استان</option>
+                                    <option value="tehran">تهران</option>
+                                    <option value="gilan">گیلان</option>
+                                </select>
+                            </div>
+                            <div class="flex flex-column flex-start text-right pl-2 w-20">
+                                <label for="city">شهر</label>
+                                <select name="city" id="city" class="p1 round border">
+                                    <option value="none">انتخاب شهر</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex align-center mt-2">
+                            <img src="./static/icons/location.svg" alt="" class="icon px-1">
+                            <h3>تحصیلات</h3>
+                        </div>
+                        <div class="flex flex-wrap px-1 shadow-3 py-2 round-2">
+                            <!-- <button class="border-none outline-blue p1 round">افزودن تحصیلات</button> -->
+                            <div class="flex w-100 mt-2 flex-start flex-wrap row-gap space-evenly">
+                                <select name="مقطع تحصیلی" id="selectMaghta" class="round border px-1 ml-2">
+                                  <option value="دیپلم">دیپلم</option>
+                                  <option value="لیسانس">لیسانس</option>
+                                  <option value="فوق لیسانس">فوق لیسانس</option>
+                                  <option value="دکترا">دکترا</option>
+                                </select>
+                                <button id="selBtn" class="dropbtn">
+                                  انتخاب مقطع تحصیلی
+                                </button>
+                                <div id="selectedOptionText"></div>
+                              </div>
+                        </div>
+                        <div class="flex align-center mt-2">
+                            <img src="./static/icons/location.svg" alt="" class="icon px-1">
+                            <h3>علاقمندی‌ها</h3>
+                        </div>
+                        <div class="flex flex-wrap px-2 p0-sm shadow-3 py-2 round-2 row-gap">
+                            <h4 class="w-100">انتخاب دسته مورد علاقه</h4>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">برنامه نویسی</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">ریاضیات</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">بورس و بازار سهام</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">استارتاپ و کسب و
+                                کار</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">مهندسی نرم افزار</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">مهندسی عمران</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">مهندسی مکانیک</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">هنر</button>
+                            <button class="pd3 round-3 border-none outline-blue ml-1 pointer">رباتیک</button>
+                        </div>
+                        <div class="flex flex-end mt-2">
+                            <button class="p1 round border-none outline-blue ml-1">انصراف</button>
+                            <button class="p1 round border-none bg-blue ml-1">اعمال تغییرات</button>
+                        </div>
+                    </div>
+                    <div id="mylearning">
+                        <div class="flex flex-column w-100 align-start">
+                            <div class="">
+                                <a href="#" class="decoration-none text-dark pl-2 subcat active">آموزش‌های من</a>
+                                <!-- <a href="#" class="decoration-none text-dark subcat">سازمانی</a> -->
+                            </div>
+                            <div class="flex w-100 mt-2 flex-start flex-wrap row-gap space-evenly">
+                                <input type="text" class="login ml-2 m0" placeholder="جستجو بین آموزش‌های من ...">
+                                <select name="همه" class="round border px-1 ml-2">
+                                    <option value="همه">همه</option>
+                                    <option value="رایگان">رایگان</option>
+                                    <option value="غیررایگان">غیررایگان</option>
+                                </select>
+                                <select name="همه" class="round border px-1">
+                                    <option value="آخرین درس در حال مطالعه">آخرین درس در حال مطالعه</option>
+                                    <option value="رایگان">رایگان</option>
+                                    <option value="غیررایگان">غیررایگان</option>
+                                </select>
+                            </div>
+                            <div class="flex w-100 mt-2 flex-start flex-wrap">
+                                <div class="card flex flex-column mw-fit w-25 ml-2">
+                                    <img src="./static/images/card-image-1.png" alt="">
+                                    <div class="card-footer text-dark py-1">
+                                        <h3 class="pdx-1">آموزش زبان اسمبلی</h3>
+                                    </div>
+                                    <div
+                                        class="flex space-between align-center bg-light text-dark space-evenly round-bottom p1">
+                                        <svg class="ml-1" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 24 24" height="21" width="21"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z">
+                                            </path>
+                                        </svg>
+                                        <span>مطالعه و یادگیری</span>
+                                    </div>
+                                </div>
+                                <div class="card flex flex-column mw-fit w-25 ml-2">
+                                    <img src="./static/images/card-image-1.png" alt="">
+                                    <div class="card-footer text-dark py-1">
+                                        <h3 class="pdx-1">آموزش زبان اسمبلی</h3>
+                                    </div>
+                                    <div
+                                        class="flex space-between align-center bg-light text-dark space-evenly round-bottom p1">
+                                        <svg class="ml-1" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 24 24" height="21" width="21"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z">
+                                            </path>
+                                        </svg>
+                                        <span>مطالعه و یادگیری</span>
+                                    </div>
+                                </div>
+                                <div class="card flex flex-column mw-fit w-25 ml-2">
+                                    <img src="./static/images/card-image-1.png" alt="">
+                                    <div class="card-footer text-dark py-1">
+                                        <h3 class="pdx-1">آموزش زبان اسمبلی</h3>
+                                    </div>
+                                    <div
+                                        class="flex space-between align-center bg-light text-dark space-evenly round-bottom p1">
+                                        <svg class="ml-1" stroke="currentColor" fill="currentColor" stroke-width="0"
+                                            viewBox="0 0 24 24" height="21" width="21"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z">
+                                            </path>
+                                        </svg>
+                                        <span>مطالعه و یادگیری</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- <div class="flex flex-column align-center mt-2 w-100">
+                            <img src="https://cdn.faradars.org/wp-content/uploads/2023/01/01/2%D8%AA%D8%A8-%D8%A7%D9%85%D9%88%D8%B2%D8%B4-%D9%87%D8%A7%DB%8C-%D8%B3%D8%A7%D8%B2%D9%85%D8%A7%D9%86%DB%8C-%D8%AE%D8%A7%D9%84%DB%8Cexpand-01.svg"
+                                alt="" class="w-75">
+                            <h2 class="text-dark">هیچ آموزش سازمانی‌ای در میان آموزش‌های شما یافت نشد.</h2>
+                            <p class="text-dark">فرادرس این امکان را در اختیار سازمان‌ها، شرکت‌ها، نهاد‌ها، دانشگاه‌ها و
+                                مدارس می‌گذارد تا بخش بزرگی از آموزش‌های فرادرس را به صورت انبوه و با هزینه عمده به
+                                مراتب پایین‌تر برای استفاده و مطالعه رایگان اعضا، کارمندان، دانشجویان و دانش‌آموزان خود
+                                تهیه کنند.
+
+                                در صورتی که سازمان، شرکت، دانشگاه یا مدرسه شما هنوز منابع آموزشی فرادرس را برای مطالعه
+                                رایگان شما تهیه نکرده است؛ می‌توانید در خصوص این امکان با واحد و مدیریت آموزش شرکت و
+                                موسسه و دانشگاه خود هماهنگی کنید تا نسبت به دسترسی رایگان شما به صد‌ها آموزش فرادرس
+                                هماهنگی لازم را با ما انجام دهند.
+
+                                درخواست‌های سازمانی با اولویت بالا پیگیری می‌شوند و در مدت زمان ۴۲ ساعت دسترسی سازمان‌ها
+                                و همکاران و اعضای آنها، به هزاران ساعت آموزش باکیفیت فرادرس فراهم می‌شود.
+
+                                فـرادرس، طرح‌هـای آموزشـی گوناگونـی را بـرای سـازمان‌ها در ابعـاد و حوزه‌هـای مختلـف، با
+                                تخفیف‌های منحصر به فرد سازمانی ارائـه کـرده اسـت. همچنیـن، سـازمان‌ها می‌تواننـد
+                                آموزش‌ها را متناسب با نیـاز خود و طـی هماهنگـی بـا کارشناسان آموزشی فرادرس، انتخاب و
+                                دریافت کنند.</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="mt-2 w-100 bg-light flex flex-column justify-center">
+            <div class="flex py-2 flex-wrap justify-center row-gap flex-column-sm align-center">
+                <div class="flex flex-column w-25 footer-description">
+                    <div class="logo">
+                        <img src="./static/icons/logo.svg" alt="" class="icon">
+                        <h2 class="display-inline">فرادرس</h2>
+                    </div>
+                    <!-- <img src="./static/images/logo-rectangle.svg" alt=""> -->
+                    <p>سازمان علمی و آموزشی فرادرس، قدیمی‌ترین و بزرگ‌ترین پلتفرم آموزش آنلاین ایران است که طی بیش از یک
+                        دهه
+                        فعالیت خود، بالغ بر ۲۱,۰۰۰ ساعت آموزش آنلاین، در قالب بیش از ۵,۷۰۰ عنوان آموزشی علمی، مهارتی و
+                        کاربردی، منتشر کرده‌است.</p>
+                </div>
+                <div class="flex flex-column w-20 align-center">
+                    <h3>لینک های مهم</h3>
+                    <ul>
+                        <li>آموزش سازمانی</li>
+                        <li>درباره ما</li>
+                        <li>تماس با ما</li>
+                        <li>حریم خصوصی</li>
+                        <li>سوالات رایج</li>
+                        <li>همکاری</li>
+                    </ul>
+                </div>
+                <div class="flex flex-column w-20 align-center">
+                    <h3>لینک های مهم</h3>
+                    <ul>
+                        <li>آموزش سازمانی</li>
+                        <li>درباره ما</li>
+                        <li>تماس با ما</li>
+                        <li>حریم خصوصی</li>
+                        <li>سوالات رایج</li>
+                        <li>همکاری</li>
+                    </ul>
+                </div>
+                <div class="flex flex-column w-33 align-center">
+                    <img src="./static/images/logo-rectangle.svg" class="w-80">
+
+                    <h4 class="text-blue">عضویت در خبرنامه</h4>
+                    <div class="search w-80 flex justify-center mt-2">
+                        <button class="round btn-black text-white border-none p1 px-2 w-40">ثبت نام</button>
+                        <input type="text" placeholder="آدرس پست الکترونیک"
+                            class="border-none w-60 p1 round bg-white mx-1 shadow">
+                    </div>
+                    <div class="flex flex-end mt-2 w-80 ">
+                        <a class="circle flex justify-center align-center mg2">Be</a>
+                        <a class="circle flex justify-center align-center mg2">IG</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="flex justify-center copyright w-100 align-center flex-wrap flex-column-sm">
+                <ul class="flex align-center flex-wrap">
+                    <li class="mg2 flex align-center"><img src="./static/icons/tell.svg">&nbsp;&nbsp;&nbsp;0912-112-1212
+                    </li>
+                    <li class="mg2 flex align-center"><img
+                            src="./static/icons/email.svg">&nbsp;&nbsp;&nbsp;faradars@gmail.com</li>
+                    <li class="mg2 flex align-center"><img src="./static/icons/location.svg">&nbsp;&nbsp;&nbsp;تهران،
+                        خیابان
+                        ولیعصر</li>
+                </ul>
+                <span class="sub">تمامی حقوق محفوظ است - 2023&copy;</span>
+            </div>
+        </footer>
+    </div>
+    <!-- Footer -->
+    <script src="./static/js/scripts.js"></script>
+    <script src="./static/js/script2.js"></script>
+    <script src="./static/js/profile.js"></script>
+</body>
+
+</html>
